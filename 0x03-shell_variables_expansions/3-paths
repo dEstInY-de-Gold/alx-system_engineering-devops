@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n $PATH 
+echo -n $PATH
