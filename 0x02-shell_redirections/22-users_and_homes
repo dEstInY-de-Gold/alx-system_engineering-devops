@@ -1,2 +1,2 @@
 #!/bin/bash
-users /etc/passwd | sort
+getent passwd | sort

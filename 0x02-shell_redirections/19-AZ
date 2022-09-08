@@ -1,2 +1,2 @@
 #!/bin/bash
-grep [A][c] | tr -s [Z][e]
+grep [A][c] | tr [Z][e]
