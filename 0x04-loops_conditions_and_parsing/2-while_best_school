@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# while loop in action
+
+cnt=1
+
+while [ $cnt -le 10 ]
+do
+	echo "Best School" &
+	cnt=$((cnt + 1))
+done
