@@ -6,9 +6,9 @@
 lst=$(ls)
 for thing in $lst
 do
-    if [ -f "$thing" ] && [[ "$thing" != .* ]] && [[ "$thing" == *-* ]]
-    then
-        echo "${thing#*-}"
-    fi
-#    echo "$thing" | cut -d '-' -f2
+#    if [ -f "$thing" ] && [[ "$thing" != .* ]] && [[ "$thing" == *-* ]]
+#+    then
+#+        echo "${thing#*-}"
+#+    fi
+    echo "$thing" | cut -d '-' -f2
 done
