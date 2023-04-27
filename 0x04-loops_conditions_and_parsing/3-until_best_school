@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Using the 'until loop' to repeat a printing task
+
+num=0
+until [ $num -eq 10 ]
+do
+    echo "Best School"
+    num=$((num + 1))
+done

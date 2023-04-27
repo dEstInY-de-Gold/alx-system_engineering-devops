@@ -1,0 +1,13 @@
+#1/usr/bin/env bash
+# Using 'if' statements in a script.
+
+num=0
+while [ $num -lt 10 ]
+do
+    echo "Best School"
+    if test $num == 8
+    then
+        echo "Hi"
+    fi
+    num=$(( num + 1))
+done
