@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# A script that uses ssh to connect to a server
-
-#!/bin/bash
-
-# Connect to the server using SSH
-ssh -i ~/.ssh/school ubuntu@100.26.236.125 # << EOF

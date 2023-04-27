@@ -1,3 +1,0 @@
-Regular expressions
-
-# ruby

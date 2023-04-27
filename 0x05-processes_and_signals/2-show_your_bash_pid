@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# To easily get the PID of a Bash process
-
-ps -aux | grep bash
