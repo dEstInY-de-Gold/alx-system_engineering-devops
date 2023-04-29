@@ -32,12 +32,12 @@ int main(void)
 
 	while (count < 5)
 	{
-        /* using fork() to create subprocesses */
+/* using fork() to create subprocesses */
 		pid = fork();
 		if (pid > 0)
 		{
 			printf("Zombie process created, PID: %d\n", pid);
-            /* pauses for one second */
+/* pauses for one second */
 			sleep(1);
 			count++;
 		}
