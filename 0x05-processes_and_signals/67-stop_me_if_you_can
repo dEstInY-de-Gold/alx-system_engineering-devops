@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A copy of your 6-stop_me_if_you_can script for 7-highlander.
+
+pkill -f 7-highlander

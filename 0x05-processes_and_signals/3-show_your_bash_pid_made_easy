@@ -3,10 +3,12 @@
 #+ Requirements:
 #+ You cannot use ps.
 
-for pid in /proc/[0-9]*
-do
-    if [ -f "${pid}/comm" ] && grep -q bash "${pid}/comm"
-    then
-        echo "${pid##*/}: $(cat "${pid}/comm")"
-    fi
-done
+pgrep bash -l
+
+# for pid in /proc/[0-9]*
+#+ do
+#+    if [ -f "${pid}/comm" ] && grep -q bash "${pid}/comm"
+#+    then
+#+        echo "${pid##*/}: $(cat "${pid}/comm")"
+#+    fi
+#+ done
