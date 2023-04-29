@@ -4,20 +4,20 @@
 if [ "$1" == "start" ]
 then
 	./manage_my_process &
-	sudo echo "$$" | tee /var/run/my_process.pid
+	sudo sh -c 'echo "$$" | tee /var/run/my_process.pid'
 	echo "manage_my_process started"
 elif [ "$1" == "stop" ]
 then
 	kill "$(pgrep -f /manage_my_process)"
 	sudo rm /var/run/my_process.pid
 	echo "manage_my_process stopped"
-elif [ "$1" == "started" ]
+elif [ "$1" == "restart" ]
 then
 	kill "$(pgrep -f /manage_my_process)"
 	sudo rm /var/run/my_process.pid
 	./manage_my_process &
-	sudo echo $$ | tee /var/run/my_process.pid
-	echo "manage_my_process started"
+	sudo sh -c 'echo "$$" | tee /var/run/my_process.pid'
+	echo "manage_my_process restarted"
 else
-	echo "Usage: manage_my_process {start|stop|started}"
+	echo "Usage: manage_my_process {start|stop|restart}"
 fi
