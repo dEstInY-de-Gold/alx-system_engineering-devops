@@ -5,7 +5,7 @@
 #+ I am invincible!!! when receiving a SIGTERM signal
 
 num=1
-while [ num ]
+while [ $num ]
 do
     echo "To infinity and beyond"
     sleep 2

@@ -13,7 +13,7 @@ then
 fi
 
 sleep 2 &
-sudo echo "$!" > "$file"
+sudo echo "$!" | tee "$file"
 
 # prints I hate the kill command, deletes the file and exits  when receiving a SIGTERM or SIGQUIT signal
 trap 'echo "I hate the kill command"; sudo rm "$file"; exit' SIGTERM SIGQUIT

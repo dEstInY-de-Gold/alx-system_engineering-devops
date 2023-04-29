@@ -4,7 +4,7 @@
 #+ In between each iteration of the loop, add a sleep 2
 
 num=1
-while [ num ]
+while [ $num ]
 do
     echo "To infinity and beyond"
     sleep 2
