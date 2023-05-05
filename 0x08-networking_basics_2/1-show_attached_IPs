@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A Bash script that displays all active IPv4 IPs
+#+ on the machine it’s executed on.
+
+ip addr show | grep -E 'inet[^6]' | awk '{print $2}' | cut -d '/' -f 1
