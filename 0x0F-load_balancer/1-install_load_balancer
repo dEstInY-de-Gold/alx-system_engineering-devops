@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Install and configuring HAproxy on my load balancer lb-01 server
+
+sudo apt update
+sudo apt install haproxy
+
+# configure nginx
+sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOT
+frontend myfrontend
+	bind *:80
+	default_backend myservers
+
+backend myservers
+	balance roundrobin
+	server web-01 52.90.22.126:80 check
+	server web-02 52.201.211.95:80 check
+EOT
+
+# test the new configuration setup
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+# start and enable haproxy
+sudo systemctl start haproxy
+sudo systemctl enable haproxy
