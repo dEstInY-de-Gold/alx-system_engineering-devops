@@ -1,4 +1,4 @@
-file { home/noah/.ssh/config:
+file {'home/noah/.ssh/config':
 	ensure  => file,
 	owner   => ubuntu,
 	group   => 54.161.235.10,
