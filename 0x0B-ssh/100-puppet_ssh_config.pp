@@ -1,12 +1,12 @@
-file {'home/noah/.ssh/config':
-	ensure  => file,
-	owner   => ubuntu,
-	group   => 54.161.235.10,
-	mode    => 0600,
-	content =>
-		Host 54.161.235.10
-		IdentityFile /home/noah/.ssh/school
-		PreferredAuthentications publickey
-		PasswordAuthentication no
-	,
+# Puppet script to create ssh config file
+file_line { 'Turn off passwd auth':
+		ensure => 'present',
+		path   => '/etc/ssh/ssh_config',
+		line   => '    PasswordAuthentication no',
+}
+
+		file_line { 'Declare identity file':
+		ensure => 'present',
+		path   => '/etc/ssh/ssh_config',
+		line   => '    IdentityFile ~/.ssh/school',
 }
