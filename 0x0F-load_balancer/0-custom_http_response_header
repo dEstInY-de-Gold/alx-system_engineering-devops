@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-Configuring a Ubuntu machine with nginx
+# Configuring a Ubuntu machine with nginx
 
 sudo apt update
 sudo apt install nginx
