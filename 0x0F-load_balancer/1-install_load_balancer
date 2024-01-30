@@ -12,8 +12,8 @@ frontend myfrontend
 
 backend myservers
 	balance roundrobin
-	server web-01 52.90.22.126:80 check
-	server web-02 52.201.211.95:80 check
+	server web-01 54.161.235.10:80 check
+	server web-02 54.237.74.89:80 check
 EOT
 
 # test the new configuration setup

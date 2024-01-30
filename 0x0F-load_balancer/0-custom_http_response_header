@@ -2,7 +2,7 @@
 # Configuring a Ubuntu machine with nginx
 
 sudo apt update
-sudo apt install nginx
+sudo apt install -y nginx
 sudo systemctl start nginx
 
 sudo sed -i "/http {/a\         add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
