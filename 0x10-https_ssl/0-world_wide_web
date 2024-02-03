@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-get record info() {
+
+get_record_info() {
 	local domain=$1
 	local subdomain=$2
 
@@ -20,5 +21,6 @@ get record info() {
 		fi
 	done
 }
+
 
 get_record_info "$1" "$2"
